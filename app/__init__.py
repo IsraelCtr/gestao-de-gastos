@@ -8,4 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///crudgestao.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from app.models.debitos import 
+from app.models.debitos import Debitos
+with app.app_context():
+    db.create_all()
+from app.controller.reso_products import Index
