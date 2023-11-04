@@ -26,5 +26,3 @@ class CriaçaoDeDebito(Resource):
             return {"message": 'servidor criado com sucesso'},201
         except Exception as e:
             return jsonify({'status':500, 'msg': f'{e}'}),500
-class autalizarDebito(Resource):
-    def atualizarMetodos(self,)

@@ -2,12 +2,12 @@ from app import db
 class Debitos(db.Model):
     __tablename__ =  'debito'
     __table_args__ = {'sqlite_autoincrement':True} 
-    id = db.colms(db.Integer,primary_key=True)
-    nome = db.colums(db.String(255))
-    tipoPagamento = (db.colums.Float)
-    data = (db.colums.Date)
-    status= (db.colums.Bolean)
-    descriçao=(db.colums.String(255))
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(255))
+    tipoPagamento = db.Column(db.Float)
+    data =  db.Column(db.Date)
+    status= db.Column(db.Boolean)
+    descriçao= db.Column(db.String(255))
     
     def __init__(self,nome,tipoPagamneto,data,status,descriçao):
         self.nome = nome
