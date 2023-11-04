@@ -14,11 +14,11 @@ class Index(Resource):
     def get(self):
         return jsonify('Seja bem vindo a minha api de gestão')
 class CriaçaoDeDebito(Resource):
-    def post(self):
+    def AddDebitos(self):
         try:
             datas = argumentos.parse_args()
             print (datas)
-            Debitos.save_products(self, datas['nome'],
+            Debitos.salvar_debitos(self, datas['nome'],
                                   datas['tipoPagamento'],
                                   datas['data'],
                                   datas['status'],
@@ -26,3 +26,5 @@ class CriaçaoDeDebito(Resource):
             return {"message": 'servidor criado com sucesso'},201
         except Exception as e:
             return jsonify({'status':500, 'msg': f'{e}'}),500
+class autalizarDebito(Resource):
+    def atualizarMetodos(self,)

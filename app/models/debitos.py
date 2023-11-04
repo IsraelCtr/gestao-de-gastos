@@ -24,7 +24,7 @@ class Debitos(db.Model):
             'status': self.status,
             'descriçao': self.descriçao
         }
-    def save_products(self,nome,tipoPagamneto,data,status,descriçao):
+    def salvar_debitos(self,nome,tipoPagamneto,data,status,descriçao):
         try:
             add_banco = Debitos(nome,tipoPagamneto,data,status,descriçao)
             db.session.add(add_banco)
