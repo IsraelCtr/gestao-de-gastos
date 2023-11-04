@@ -11,7 +11,5 @@ db = SQLAlchemy(app)
 from app.models.debitos import Debitos
 with app.app_context():
     db.create_all()
-from app.controller.reso_products import Index,CriaçaoDeDebito
-api.add_resource(Index,'/')
-api.add_resource(CriaçaoDeDebito,'/criar')
+
 
