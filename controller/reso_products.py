@@ -1,7 +1,7 @@
 from datetime import date
 from flask import jsonify
 from flask_restful import Resource, reqparse
-from app.models.debitos import Debitos
+from models.debitos import Debitos
 
 argumentos= reqparse.RequestParser()
 argumentos.add_argument('nome',type=str )
